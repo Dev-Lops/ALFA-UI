@@ -15,4 +15,12 @@ export const CustonTag: StoryObj<TextProps> = {
     children: "Strong text",
     as: "strong",
   },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "Por padrão o heading sempre será um `h2`, mas você pode alterar aplicando a propriedade `as` ao componente",
+      },
+    },
+  },
 }

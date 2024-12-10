@@ -1,7 +1,7 @@
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
 import * as react from 'react';
-import { ComponentProps } from 'react';
+import { ComponentProps, InputHTMLAttributes } from 'react';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 
@@ -1144,4 +1144,9 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
 interface ButtonProps extends ComponentProps<typeof Button> {
 }
 
-export { Avatar, type AvatarProps, Box, type BoxProps, Button, type ButtonProps, Heading, type HeadingProps, Text, type TextProps };
+interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
+    prefix?: string;
+}
+declare function TextInput({ prefix, ...props }: TextInputProps): react_jsx_runtime.JSX.Element;
+
+export { Avatar, type AvatarProps, Box, type BoxProps, Button, type ButtonProps, Heading, type HeadingProps, Text, TextInput, type TextInputProps, type TextProps };

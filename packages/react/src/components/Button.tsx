@@ -39,10 +39,6 @@ export const Button = styled("button", {
         "&:not(:disabled):hover": {
           backgroundColor: "$lime300",
         },
-
-        "&disabled": {
-          backgroundColor: "$gray200",
-        },
       },
       secondary: {
         color: "$lime300",
@@ -52,11 +48,6 @@ export const Button = styled("button", {
           backgroundColor: "$lime500",
           color: "$white",
         },
-
-        "&disabled": {
-          color: "$gray200",
-          borderColor: "$gray200",
-        },
       },
       tertiary: {
         color: "$gray100",
@@ -64,13 +55,14 @@ export const Button = styled("button", {
         "&:not(:disabled):hover": {
           color: "$white",
         },
+      },
+      ghost: {
+        color: "$white",
 
-        "&disabled": {
-          color: "$gray600",
-       
+        "&:not(:disabled):hover": {
+          color: "$white",
         },
       },
-      ghost: {},
     },
     size: {
       sm: {

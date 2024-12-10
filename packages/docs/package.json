@@ -19,7 +19,7 @@
     "@alfa-ui/ts-config": "*",
     "phosphor-react": "^1.4.1",
     "polished": "^4.3.1",
-    "react": "^18.3.1",
+    "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {

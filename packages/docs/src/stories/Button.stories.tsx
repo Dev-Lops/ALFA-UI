@@ -1,5 +1,6 @@
+import { Button, type ButtonProps } from '@alfa-ui/react'
 import { Meta, StoryObj } from "@storybook/react"
-import { Button, ButtonProps } from "@alfa-ui/react"
+
 import { ArrowRight } from "phosphor-react"
 
 export default {
@@ -7,6 +8,8 @@ export default {
   component: Button,
   args: {
     children: "Send",
+    onClick: () => alert("Botão clicado!"),
+    type: "button",
   },
 } as Meta<ButtonProps>
 
@@ -26,10 +29,10 @@ export const Tertiary: StoryObj<ButtonProps> = {
   },
 }
 
-export const Small: StoryObj<ButtonProps> = {
+export const Ghost: StoryObj<ButtonProps> = {
   args: {
-    children: "Small button",
-    size: "sm",
+    children: "Ghost Button",
+    variant: "ghost",
   },
 }
 
@@ -46,7 +49,14 @@ export const WithIcon: StoryObj<ButtonProps> = {
 
 export const Disabled: StoryObj<ButtonProps> = {
   args: {
-    children: "Disabled button",
+    children: "Disabled Button",
     disabled: true,
+  },
+}
+
+export const SubmitButton: StoryObj<ButtonProps> = {
+  args: {
+    children: "Submit Form",
+    type: "submit",
   },
 }

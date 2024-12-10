@@ -22,7 +22,6 @@ var boxShadow = {
 var colors = {
   white: "#FFF",
   black: "#000",
-  teste: "000",
   gray100: "#E1E1E6",
   gray200: "#A9A9B2",
   gray400: "#7C7C8A",
@@ -65,6 +64,8 @@ var radii = {
 var fonts = {
   default: "Poppins, sans-serif",
   heading: "Montserat, sans-serif",
+  paragraph: "Roboto, sans-serif",
+  title: "Alegreya SC, sans-serif",
   code: "monospace"
 };
 var fontSizes = {

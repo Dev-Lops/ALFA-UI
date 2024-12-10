@@ -3,7 +3,11 @@
   "tasks": {
     "build": {
       "outputs": [
-        "dist/**"
+        "dist/**",
+        "storybook-static/**"
+      ],
+      "dependsOn": [
+        "^build"
       ]
     },
     "dev": {

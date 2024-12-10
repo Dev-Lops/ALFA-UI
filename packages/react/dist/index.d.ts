@@ -8,7 +8,6 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
     colors: {
         white: string;
         black: string;
-        teste: string;
         gray100: string;
         gray200: string;
         gray400: string;
@@ -47,6 +46,8 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
     fonts: {
         default: string;
         heading: string;
+        paragraph: string;
+        title: string;
         code: string;
     };
     lineHeights: {

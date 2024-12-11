@@ -7,6 +7,13 @@ export default {
     src: "https://github.com/dev-lops.png",
     alt: "Anderson Lopes",
   },
+  argTypes: {
+    src: {
+      control: {
+        type: "text",
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}

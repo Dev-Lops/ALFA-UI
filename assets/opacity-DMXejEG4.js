@@ -1,0 +1,4 @@
+import{j as t}from"./index-D171frJ-.js";import{useMDXComponents as r}from"./index-BJaai1kI.js";import{ag as s}from"./chunk-NUUEMKO5-BzrT2Ut9.js";import{T as e}from"./TokensGrid-CGdOlo9A.js";import{o as m}from"./index-DDlirm5l.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-BsNqBstw.js";import"./index-DuZrfDUH.js";import"./iframe-Cm2xhh9w.js";import"../sb-preview/runtime.js";import"./index-B2qi47u8.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./react-18-664vZJcb.js";function i(o){const n={h1:"h1",p:"p",...r(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(s,{title:"Tokens/Opacity"}),`
+`,t.jsx(n.h1,{id:"opacity",children:"Opacity"}),`
+`,t.jsx(n.p,{children:"Essas são os Opacitys utilizados no Alfa UI."}),`
+`,t.jsx(e,{tokens:m})]})}function D(o={}){const{wrapper:n}={...r(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(i,{...o})}):i(o)}export{D as default};

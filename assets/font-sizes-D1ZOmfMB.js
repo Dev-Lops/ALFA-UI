@@ -1,0 +1,4 @@
+import{j as t}from"./index-D171frJ-.js";import{useMDXComponents as e}from"./index-BJaai1kI.js";import{ag as r}from"./chunk-NUUEMKO5-BzrT2Ut9.js";import{T as i}from"./TokensGrid-CGdOlo9A.js";import{f as m}from"./index-DDlirm5l.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-BsNqBstw.js";import"./index-DuZrfDUH.js";import"./iframe-Cm2xhh9w.js";import"../sb-preview/runtime.js";import"./index-B2qi47u8.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./react-18-664vZJcb.js";function s(o){const n={h1:"h1",p:"p",...e(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(r,{title:"Tokens/Font Sizes"}),`
+`,t.jsx(n.h1,{id:"font-sizes",children:"Font Sizes"}),`
+`,t.jsx(n.p,{children:"Essas são os font sizes utilizados no Alfa UI."}),`
+`,t.jsx(i,{tokens:m,hasRemValue:!0})]})}function D(o={}){const{wrapper:n}={...e(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(s,{...o})}):s(o)}export{D as default};

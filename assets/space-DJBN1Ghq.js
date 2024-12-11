@@ -1,0 +1,4 @@
+import{j as t}from"./index-D171frJ-.js";import{useMDXComponents as n}from"./index-BJaai1kI.js";import{ag as r}from"./chunk-NUUEMKO5-BzrT2Ut9.js";import{T as i}from"./TokensGrid-CGdOlo9A.js";import{s as m}from"./index-DDlirm5l.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-BsNqBstw.js";import"./index-DuZrfDUH.js";import"./iframe-Cm2xhh9w.js";import"../sb-preview/runtime.js";import"./index-B2qi47u8.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./react-18-664vZJcb.js";function e(o){const s={h1:"h1",p:"p",...n(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(r,{title:"Tokens/Space"}),`
+`,t.jsx(s.h1,{id:"space",children:"Space"}),`
+`,t.jsx(s.p,{children:"Essas são os spaces utilizados no Alfa UI."}),`
+`,t.jsx(i,{tokens:m,hasRemValue:!0})]})}function T(o={}){const{wrapper:s}={...n(),...o.components};return s?t.jsx(s,{...o,children:t.jsx(e,{...o})}):e(o)}export{T as default};

@@ -4,18 +4,18 @@ import { Input, Prefix, TextInputContainer } from "./styles"
 // Extende diretamente de InputHTMLAttributes para pegar todas as propriedades do <input>
 export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
   prefix?: string // Possibilidade de prefixo
+  size?: "sm" | "md";
 }
 
 export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
-  ({ prefix, ...props }: TextInputProps, ref) => {
+  ({ prefix, size = "md", ...props }: TextInputProps, ref) => {  // Definindo um valor padrão "md"
     return (
-      <TextInputContainer>
+      <TextInputContainer size={size}>
         {!!prefix && <Prefix>{prefix}</Prefix>}
-        <Input ref={ref} {...props} />{" "}
-        {/* Propaga todas as props, incluindo placeholder */}
+        <Input ref={ref} {...props} />
       </TextInputContainer>
-    )
+    );
   }
-)
+);
 
 TextInput.displayName = "TextInput"

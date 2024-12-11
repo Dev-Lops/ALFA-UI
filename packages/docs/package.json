@@ -17,6 +17,7 @@
     "@alfa-ui/react": "*",
     "@alfa-ui/tokens": "*",
     "@alfa-ui/ts-config": "*",
+    "@storybook/addon-a11y": "^8.4.7",
     "phosphor-react": "^1.4.1",
     "polished": "^4.3.1",
     "react": "^19.0.0",

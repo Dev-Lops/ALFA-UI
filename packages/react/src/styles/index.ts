@@ -22,6 +22,7 @@ export const {
   config,
 } = createStitches({
   themeMap: { ...defaultThemeMap, height: "space", width: "space" },
+
   theme: {
     colors,
     fontSizes,

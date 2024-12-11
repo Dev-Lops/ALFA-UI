@@ -20,7 +20,9 @@ export const CheckBoxContainer = styled(Checkbox.Root, {
     backgroundColor: "$lime300",
   },
 
-  "&:focus": { border: "2px solid $lime300" },
+  '&:focus, &[data-state="checked"]': {
+    border: "2px solid $lime300",
+  },
 })
 
 const slideIn = keyframes({

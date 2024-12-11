@@ -6,9 +6,15 @@
   ],
   "scripts": {
     "dev": "turbo run dev --parallel",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=!@alfa-ui/docs && changeset publish"
   },
   "devDependencies": {
     "turbo": "^2.3.3"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.10"
   }
 }

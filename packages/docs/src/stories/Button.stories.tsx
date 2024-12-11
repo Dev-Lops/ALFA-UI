@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from '@alfa-ui/react'
+import { Button, type ButtonProps } from "@alfa-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import { ArrowRight } from "phosphor-react"
@@ -8,8 +8,26 @@ export default {
   component: Button,
   args: {
     children: "Send",
-    onClick: () => alert("Botão clicado!"),
+    variant: "primary",
+    size: "md",
+    disabled: false,
     type: "button",
+  },
+  argTypes: {
+    variant: {
+      options: ["primary", "secondary", "tertiary"],
+      control: { type: "select" },
+    },
+    size: {
+      options: ["sm", "md"],
+      control: { type: "select" },
+    },
+    disabled: {
+      control: {
+        type: "boolean",
+      },
+    },
+    onClick: { action: "Click" },
   },
 } as Meta<ButtonProps>
 

@@ -13,6 +13,7 @@ export const colors = {
 
   lime200: "#d9f99d",
   lime300: "#bef264",
+  lime400: "#d9f99d",
   lime500: "#84cc16",
   lime700: "#4d7c0f",
   lime900: "#365314",

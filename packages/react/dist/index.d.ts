@@ -1616,8 +1616,9 @@ declare const CheckBoxContainer: _stitches_react_types_styled_component.StyledCo
 
 interface CheckBoxProps extends ComponentProps<typeof CheckBoxContainer> {
     onCheckedChange?: (checked: boolean) => void;
+    checked?: boolean;
 }
-declare function CheckBox({ onCheckedChange, ...props }: CheckBoxProps): react_jsx_runtime.JSX.Element;
+declare function CheckBox({ onCheckedChange, checked, ...props }: CheckBoxProps): react_jsx_runtime.JSX.Element;
 declare namespace CheckBox {
     var displayName: string;
 }

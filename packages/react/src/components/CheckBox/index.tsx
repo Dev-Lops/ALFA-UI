@@ -5,15 +5,16 @@ import type { ComponentProps } from "react";
 export interface CheckBoxProps
   extends ComponentProps<typeof CheckBoxContainer> {
   onCheckedChange?: (checked: boolean) => void;
+  checked?: boolean; // Adicionando a propriedade 'checked'
 }
 
-export function CheckBox({ onCheckedChange, ...props }: CheckBoxProps) {
+export function CheckBox({ onCheckedChange, checked, ...props }: CheckBoxProps) {
   return (
     <CheckBoxContainer
       {...props}
-      onChange={(event) => {
-        const checked = (event.target as HTMLInputElement).checked; // Cast para garantir que é um HTMLInputElement
-        if (onCheckedChange) onCheckedChange(checked);
+      checked={checked} // Passando o 'checked' para o Container
+      onCheckedChange={(checkedValue) => {
+        if (onCheckedChange) onCheckedChange(!!checkedValue); // Garantir que o valor seja booleano
       }}
     >
       <CheckBoxIndicator asChild>

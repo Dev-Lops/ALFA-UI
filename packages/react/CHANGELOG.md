@@ -1,5 +1,12 @@
 # @alfa-ui/react
 
+## 4.0.0
+
+### Major Changes
+
+- update a props checkbox
+- update
+
 ## 3.0.0
 
 ### Major Changes

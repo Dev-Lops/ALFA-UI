@@ -506,14 +506,14 @@ var CheckBoxIndicator = styled(Checkbox.Indicator, {
 
 // src/components/CheckBox/index.tsx
 var import_jsx_runtime3 = require("react/jsx-runtime");
-function CheckBox({ onCheckedChange, ...props }) {
+function CheckBox({ onCheckedChange, checked, ...props }) {
   return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
     CheckBoxContainer,
     {
       ...props,
-      onChange: (event) => {
-        const checked = event.target.checked;
-        if (onCheckedChange) onCheckedChange(checked);
+      checked,
+      onCheckedChange: (checkedValue) => {
+        if (onCheckedChange) onCheckedChange(!!checkedValue);
       },
       children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckBoxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_phosphor_react2.Check, { weight: "bold" }) })
     }

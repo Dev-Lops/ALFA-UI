@@ -454,14 +454,14 @@ var CheckBoxIndicator = styled(Checkbox.Indicator, {
 
 // src/components/CheckBox/index.tsx
 import { jsx as jsx3 } from "react/jsx-runtime";
-function CheckBox({ onCheckedChange, ...props }) {
+function CheckBox({ onCheckedChange, checked, ...props }) {
   return /* @__PURE__ */ jsx3(
     CheckBoxContainer,
     {
       ...props,
-      onChange: (event) => {
-        const checked = event.target.checked;
-        if (onCheckedChange) onCheckedChange(checked);
+      checked,
+      onCheckedChange: (checkedValue) => {
+        if (onCheckedChange) onCheckedChange(!!checkedValue);
       },
       children: /* @__PURE__ */ jsx3(CheckBoxIndicator, { asChild: true, children: /* @__PURE__ */ jsx3(Check, { weight: "bold" }) })
     }

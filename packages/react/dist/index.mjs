@@ -32,6 +32,7 @@ var colors = {
   gray900: "#121214",
   lime200: "#d9f99d",
   lime300: "#bef264",
+  lime400: "#d9f99d",
   lime500: "#84cc16",
   lime700: "#4d7c0f",
   lime900: "#365314"
@@ -124,7 +125,7 @@ var {
 
 // src/components/Box.tsx
 var Box = styled("div", {
-  padding: "$4",
+  padding: "$6",
   borderRadius: "$md",
   backgroundColor: "$gray600",
   boxShadow: "$sm",
@@ -190,8 +191,8 @@ import * as Avatar from "@radix-ui/react-avatar";
 var AvatarContainer = styled(Avatar.Root, {
   borderRadius: "$full",
   display: "inline-block",
-  width: "$12",
-  height: "$12",
+  width: "$16",
+  height: "$16",
   overflow: "hidden"
 });
 var AvatarImage = styled(Avatar.Image, {
@@ -249,6 +250,9 @@ var Button = styled("button", {
     cursor: "not-allowed",
     opacity: 0.6
   },
+  "&:focus": {
+    boxShadow: "0 0 0 2px $colors$gray100"
+  },
   variants: {
     variant: {
       primary: {
@@ -295,6 +299,9 @@ var Button = styled("button", {
 });
 Button.displayName = "Button";
 
+// src/components/TextInput/index.tsx
+import { forwardRef } from "react";
+
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled("div", {
   backgroundColor: "$gray900",
@@ -303,13 +310,26 @@ var TextInputContainer = styled("div", {
   boxSizing: "border-box",
   border: "2px solid $gray900",
   display: "flex",
-  alignItems: "baseline",
+  alignItems: "center",
+  variant: {
+    size: {
+      sm: {
+        padding: "$2 $3"
+      },
+      md: {
+        padding: "$3 $4"
+      }
+    }
+  },
   "&:has(input:focus)": {
     borderColor: "$lime300"
   },
   "&:has(input:disabled)": {
     opacity: 0.5,
     cursor: "not-allowed"
+  },
+  defaultVariants: {
+    size: "md"
   }
 });
 var Prefix = styled("span", {
@@ -339,13 +359,15 @@ var Input = styled("input", {
 
 // src/components/TextInput/index.tsx
 import { jsx as jsx2, jsxs as jsxs2 } from "react/jsx-runtime";
-function TextInput({ prefix, ...props }) {
-  return /* @__PURE__ */ jsxs2(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ jsx2(Prefix, { children: prefix }),
-    /* @__PURE__ */ jsx2(Input, { ...props }),
-    " "
-  ] });
-}
+var TextInput = forwardRef(
+  ({ prefix, ...props }, ref) => {
+    return /* @__PURE__ */ jsxs2(TextInputContainer, { children: [
+      !!prefix && /* @__PURE__ */ jsx2(Prefix, { children: prefix }),
+      /* @__PURE__ */ jsx2(Input, { ref, ...props }),
+      " "
+    ] });
+  }
+);
 TextInput.displayName = "TextInput";
 
 // src/components/TextArea.tsx
@@ -397,7 +419,9 @@ var CheckBoxContainer = styled(Checkbox.Root, {
   '&[data-state="checked"]': {
     backgroundColor: "$lime300"
   },
-  "&:focus": { border: "2px solid $lime300" }
+  '&:focus, &[data-state="checked"]': {
+    border: "2px solid $lime300"
+  }
 });
 var slideIn = keyframes({
   from: {
@@ -430,8 +454,18 @@ var CheckBoxIndicator = styled(Checkbox.Indicator, {
 
 // src/components/CheckBox/index.tsx
 import { jsx as jsx3 } from "react/jsx-runtime";
-function CheckBox(props) {
-  return /* @__PURE__ */ jsx3(CheckBoxContainer, { ...props, children: /* @__PURE__ */ jsx3(CheckBoxIndicator, { asChild: true, children: /* @__PURE__ */ jsx3(Check, { weight: "bold" }) }) });
+function CheckBox({ onCheckedChange, ...props }) {
+  return /* @__PURE__ */ jsx3(
+    CheckBoxContainer,
+    {
+      ...props,
+      onChange: (event) => {
+        const checked = event.target.checked;
+        if (onCheckedChange) onCheckedChange(checked);
+      },
+      children: /* @__PURE__ */ jsx3(CheckBoxIndicator, { asChild: true, children: /* @__PURE__ */ jsx3(Check, { weight: "bold" }) })
+    }
+  );
 }
 CheckBox.displayName = "CheckBox";
 
@@ -487,5 +521,13 @@ export {
   MultiStep,
   Text,
   TextArea,
-  TextInput
+  TextInput,
+  config,
+  createTheme,
+  css,
+  getCssText,
+  globalCss,
+  keyframes,
+  styled,
+  theme
 };

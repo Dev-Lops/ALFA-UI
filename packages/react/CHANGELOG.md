@@ -1,5 +1,11 @@
 # @alfa-ui/react
 
+## 3.0.0
+
+### Major Changes
+
+- update a components
+
 ## 2.0.1
 
 ### Patch Changes

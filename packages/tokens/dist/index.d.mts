@@ -11,6 +11,7 @@ declare const colors: {
     gray900: string;
     lime200: string;
     lime300: string;
+    lime400: string;
     lime500: string;
     lime700: string;
     lime900: string;

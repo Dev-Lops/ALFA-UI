@@ -921,7 +921,7 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
 }, {}>>;
 
 interface AvatarProps extends ComponentProps<typeof AvatarImage> {
-    src: string;
+    src?: string;
     alt: string;
 }
 declare function Avatar({ alt, src, ...props }: AvatarProps): react_jsx_runtime.JSX.Element;

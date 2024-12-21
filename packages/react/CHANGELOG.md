@@ -1,5 +1,11 @@
 # @alfa-ui/react
 
+## 8.0.0
+
+### Major Changes
+
+- update a compoenent avatar configure props
+
 ## 7.0.0
 
 ### Major Changes

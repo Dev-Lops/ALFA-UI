@@ -1,0 +1,4 @@
+import{j as o}from"./index-B0uyRLUC.js";import{useMDXComponents as s}from"./index-BJaai1kI.js";import{ag as i}from"./chunk-NUUEMKO5-DIutlg1M.js";import{T as e}from"./TokensGrid-B6u9zfJh.js";import{b as m}from"./index-CspouBC9.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-BsNqBstw.js";import"./index-DuZrfDUH.js";import"./iframe-O9-MJn9B.js";import"../sb-preview/runtime.js";import"./index-B2qi47u8.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";import"./react-18-664vZJcb.js";function r(t){const n={h1:"h1",p:"p",...s(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(i,{title:"Tokens/Box Shadow"}),`
+`,o.jsx(n.h1,{id:"box-shadow",children:"Box Shadow"}),`
+`,o.jsx(n.p,{children:"Essas são os box Shadows utilizados no Alfa UI."}),`
+`,o.jsx(e,{tokens:m})]})}function k(t={}){const{wrapper:n}={...s(),...t.components};return n?o.jsx(n,{...t,children:o.jsx(r,{...t})}):r(t)}export{k as default};

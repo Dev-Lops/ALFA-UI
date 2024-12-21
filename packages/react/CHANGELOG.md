@@ -1,5 +1,11 @@
 # @alfa-ui/react
 
+## 10.0.0
+
+### Major Changes
+
+- Introduce a new component - Toast and uploado for npm
+
 ## 9.1.1
 
 ### Patch Changes

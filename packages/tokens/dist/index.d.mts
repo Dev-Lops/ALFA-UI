@@ -9,12 +9,24 @@ declare const colors: {
     gray700: string;
     gray800: string;
     gray900: string;
+    lime100: string;
     lime200: string;
     lime300: string;
     lime400: string;
     lime500: string;
+    lime600: string;
     lime700: string;
+    lime800: string;
     lime900: string;
+    red100: string;
+    red200: string;
+    red300: string;
+    red400: string;
+    red500: string;
+    red600: string;
+    red700: string;
+    red800: string;
+    red900: string;
 };
 
 declare const space: {

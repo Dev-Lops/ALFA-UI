@@ -1,5 +1,11 @@
 # @alfa-ui/react
 
+## 6.0.0
+
+### Major Changes
+
+- update a prop alt for avatar component
+
 ## 5.0.0
 
 ### Major Changes

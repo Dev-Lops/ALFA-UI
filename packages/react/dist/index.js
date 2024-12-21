@@ -270,9 +270,9 @@ var AvatarFallback = styled(Avatar.Fallback, {
 // src/components/Avatar/index.tsx
 var import_phosphor_react = require("phosphor-react");
 var import_jsx_runtime = require("react/jsx-runtime");
-function Avatar2({ src, ...props }) {
+function Avatar2({ alt, src, ...props }) {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AvatarContainer, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AvatarImage, { src, ...props }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AvatarImage, { src, ...props, alt }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_phosphor_react.User, {}) })
   ] });
 }

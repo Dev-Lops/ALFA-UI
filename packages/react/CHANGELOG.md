@@ -1,5 +1,11 @@
 # @alfa-ui/react
 
+## 9.1.1
+
+### Patch Changes
+
+- update a componente checkbox
+
 ## 9.1.0
 
 ### Minor Changes

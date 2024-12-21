@@ -1,5 +1,11 @@
 # @alfa-ui/react
 
+## 9.1.0
+
+### Minor Changes
+
+- refact a components pontualist
+
 ## 9.0.0
 
 ### Major Changes

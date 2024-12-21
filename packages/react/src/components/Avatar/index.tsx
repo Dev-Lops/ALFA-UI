@@ -5,7 +5,7 @@ import { User } from "phosphor-react";
 // Adicionando a propriedade 'src' explicitamente à interface AvatarProps
 export interface AvatarProps extends ComponentProps<typeof AvatarImage> {
   src?: string;
-  alt: string;
+  alt?: string;
 }
 
 export function Avatar({ alt, src, ...props }: AvatarProps) {

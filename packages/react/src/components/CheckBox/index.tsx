@@ -4,7 +4,9 @@ import { CheckBoxContainer, CheckBoxIndicator } from './styles'
 
 
 export interface CheckboxProps
-  extends ComponentProps<typeof CheckBoxContainer> { }
+  extends ComponentProps<typeof CheckBoxContainer> {
+  onCheckedChange: (checked: boolean) => void;
+}
 
 export function Checkbox(props: CheckboxProps) {
   return (

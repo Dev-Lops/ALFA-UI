@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 export default {
   title: "Data display/Skeleton",
-  component: Skeleton, // Agora o SkeletonContainer é o componente que representa o skeleton da imagem
+  component: Skeleton, // Agora o Skeleton é o componente que representa o skeleton da imagem
   args: {},
   argTypes: {},
 } as Meta;

@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { Box, Text, CheckBox, CheckBoxProps } from "@alfa-ui/react"
+import { Box, Checkbox, Text, type CheckboxProps, } from "@alfa-ui/react"
 
 export default {
   title: "Form/Checkbox",
-  component: CheckBox,
+  component: Checkbox,
   args: {},
   decorators: [
     (Story) => {
@@ -18,9 +18,9 @@ export default {
       )
     },
   ],
-} as Meta<CheckBoxProps>
+} as Meta<CheckboxProps>
 
-export const Primary: StoryObj<CheckBoxProps> = {
+export const Primary: StoryObj<CheckboxProps> = {
   args: {
     placeholder: "Type your email address",
   },

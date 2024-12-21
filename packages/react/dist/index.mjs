@@ -454,20 +454,10 @@ var CheckBoxIndicator = styled(Checkbox.Indicator, {
 
 // src/components/CheckBox/index.tsx
 import { jsx as jsx3 } from "react/jsx-runtime";
-function CheckBox({ onCheckedChange, checked, ...props }) {
-  return /* @__PURE__ */ jsx3(
-    CheckBoxContainer,
-    {
-      ...props,
-      checked,
-      onCheckedChange: (checkedValue) => {
-        if (onCheckedChange) onCheckedChange(!!checkedValue);
-      },
-      children: /* @__PURE__ */ jsx3(CheckBoxIndicator, { asChild: true, children: /* @__PURE__ */ jsx3(Check, { weight: "bold" }) })
-    }
-  );
+function Checkbox2(props) {
+  return /* @__PURE__ */ jsx3(CheckBoxContainer, { ...props, children: /* @__PURE__ */ jsx3(CheckBoxIndicator, { asChild: true, children: /* @__PURE__ */ jsx3(Check, { weight: "bold" }) }) });
 }
-CheckBox.displayName = "CheckBox";
+Checkbox2.displayName = "Checkbox";
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -512,13 +502,41 @@ function MultiStep({ size, currentStep = 1 }) {
   ] });
 }
 MultiStep.displayName = "MultiStep";
+
+// src/components/Skeleton/styles.ts
+var SkeletonContainer = styled("div", {
+  borderRadius: "$full",
+  // Igual ao Avatar (borda arredondada)
+  backgroundColor: "$gray200",
+  animation: "pulse 1.5s infinite ease-in-out",
+  // Ajuste para o skeleton de imagem circular, com mesmo tamanho do Avatar
+  width: "$16",
+  // Tamanho do Avatar
+  height: "$16",
+  // Tamanho do Avatar
+  overflow: "hidden",
+  // Garante que o conteúdo não ultrapasse os limites
+  "@keyframes pulse": {
+    "0%": { backgroundColor: "$gray200" },
+    "50%": { backgroundColor: "$gray300" },
+    "100%": { backgroundColor: "$gray200" }
+  }
+});
+
+// src/components/Skeleton/index.tsx
+import { jsx as jsx5 } from "react/jsx-runtime";
+function Skeleton({ ...props }) {
+  return /* @__PURE__ */ jsx5(SkeletonContainer, { ...props });
+}
+Skeleton.displayName = "Skeleton";
 export {
   Avatar2 as Avatar,
   Box,
   Button,
-  CheckBox,
+  Checkbox2 as Checkbox,
   Heading,
   MultiStep,
+  Skeleton,
   Text,
   TextArea,
   TextInput,

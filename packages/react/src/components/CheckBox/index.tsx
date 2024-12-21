@@ -1,27 +1,20 @@
-import { Check } from "phosphor-react";
-import { CheckBoxContainer, CheckBoxIndicator } from "./styles";
-import type { ComponentProps } from "react";
+import { Check } from 'phosphor-react'
+import { ComponentProps } from 'react'
+import { CheckBoxContainer, CheckBoxIndicator } from './styles'
 
-export interface CheckBoxProps
-  extends ComponentProps<typeof CheckBoxContainer> {
-  onCheckedChange?: (checked: boolean) => void;
-  checked?: boolean; // Adicionando a propriedade 'checked'
-}
 
-export function CheckBox({ onCheckedChange, checked, ...props }: CheckBoxProps) {
+export interface CheckboxProps
+  extends ComponentProps<typeof CheckBoxContainer> { }
+
+export function Checkbox(props: CheckboxProps) {
   return (
-    <CheckBoxContainer
-      {...props}
-      checked={checked} // Passando o 'checked' para o Container
-      onCheckedChange={(checkedValue) => {
-        if (onCheckedChange) onCheckedChange(!!checkedValue); // Garantir que o valor seja booleano
-      }}
-    >
+    <CheckBoxContainer {...props}>
       <CheckBoxIndicator asChild>
         <Check weight="bold" />
       </CheckBoxIndicator>
     </CheckBoxContainer>
-  );
+
+  )
 }
 
-CheckBox.displayName = "CheckBox";
+Checkbox.displayName = 'Checkbox'

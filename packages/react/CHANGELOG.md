@@ -1,5 +1,11 @@
 # @alfa-ui/react
 
+## 9.0.0
+
+### Major Changes
+
+- CREATE A COMPONENT SKELETON FOR A COMPONENT DESIGN SYSTEM
+
 ## 8.0.0
 
 ### Major Changes

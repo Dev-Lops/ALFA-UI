@@ -33,9 +33,10 @@ __export(src_exports, {
   Avatar: () => Avatar2,
   Box: () => Box,
   Button: () => Button,
-  CheckBox: () => CheckBox,
+  Checkbox: () => Checkbox2,
   Heading: () => Heading,
   MultiStep: () => MultiStep,
+  Skeleton: () => Skeleton,
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput,
@@ -506,20 +507,10 @@ var CheckBoxIndicator = styled(Checkbox.Indicator, {
 
 // src/components/CheckBox/index.tsx
 var import_jsx_runtime3 = require("react/jsx-runtime");
-function CheckBox({ onCheckedChange, checked, ...props }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
-    CheckBoxContainer,
-    {
-      ...props,
-      checked,
-      onCheckedChange: (checkedValue) => {
-        if (onCheckedChange) onCheckedChange(!!checkedValue);
-      },
-      children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckBoxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_phosphor_react2.Check, { weight: "bold" }) })
-    }
-  );
+function Checkbox2(props) {
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckBoxContainer, { ...props, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckBoxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) });
 }
-CheckBox.displayName = "CheckBox";
+Checkbox2.displayName = "Checkbox";
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -564,14 +555,42 @@ function MultiStep({ size, currentStep = 1 }) {
   ] });
 }
 MultiStep.displayName = "MultiStep";
+
+// src/components/Skeleton/styles.ts
+var SkeletonContainer = styled("div", {
+  borderRadius: "$full",
+  // Igual ao Avatar (borda arredondada)
+  backgroundColor: "$gray200",
+  animation: "pulse 1.5s infinite ease-in-out",
+  // Ajuste para o skeleton de imagem circular, com mesmo tamanho do Avatar
+  width: "$16",
+  // Tamanho do Avatar
+  height: "$16",
+  // Tamanho do Avatar
+  overflow: "hidden",
+  // Garante que o conteúdo não ultrapasse os limites
+  "@keyframes pulse": {
+    "0%": { backgroundColor: "$gray200" },
+    "50%": { backgroundColor: "$gray300" },
+    "100%": { backgroundColor: "$gray200" }
+  }
+});
+
+// src/components/Skeleton/index.tsx
+var import_jsx_runtime5 = require("react/jsx-runtime");
+function Skeleton({ ...props }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(SkeletonContainer, { ...props });
+}
+Skeleton.displayName = "Skeleton";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
   Box,
   Button,
-  CheckBox,
+  Checkbox,
   Heading,
   MultiStep,
+  Skeleton,
   Text,
   TextArea,
   TextInput,

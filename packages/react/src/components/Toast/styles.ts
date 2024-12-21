@@ -24,6 +24,7 @@ export const ToastViewport = styled(ToastPrimitive.Viewport, {
   gap: '$2',
 })
 
+
 export const StyledToast = styled(ToastPrimitive.Root, {
   backgroundColor: '$gray900',
   color: '$white',
@@ -46,6 +47,7 @@ export const StyledToast = styled(ToastPrimitive.Root, {
     },
   },
 })
+
 
 export const ToastTitle = styled(ToastPrimitive.Title, {
   fontWeight: '$bold',

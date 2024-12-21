@@ -17,7 +17,12 @@ export function Toast({
 }: ToastProps) {
   return (
     <ToastPrimitive.Provider>
-      <StyledToast type={type} onOpenChange={(open) => !open && onClose?.()}>
+      <StyledToast type={type} onOpenChange={(open) => {
+        if (!open) {
+          console.log("Toast fechado");
+          onClose?.();
+        }
+      }}>
         <div>
           <ToastTitle>{title}</ToastTitle>
           {description && <ToastDescription>{description}</ToastDescription>}
@@ -30,5 +35,6 @@ export function Toast({
       </StyledToast>
       <ToastViewport />
     </ToastPrimitive.Provider>
+
   )
 }

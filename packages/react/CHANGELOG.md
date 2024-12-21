@@ -1,5 +1,11 @@
 # @alfa-ui/react
 
+## 10.1.0
+
+### Minor Changes
+
+- update a toast component
+
 ## 10.0.0
 
 ### Major Changes

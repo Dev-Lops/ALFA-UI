@@ -2628,7 +2628,12 @@ function Toast2({
   onClose
 }) {
   return /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)(Provider, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)(StyledToast, { type, onOpenChange: (open) => !open && onClose?.(), children: [
+    /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)(StyledToast, { type, onOpenChange: (open) => {
+      if (!open) {
+        console.log("Toast fechado");
+        onClose?.();
+      }
+    }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { children: [
         /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(ToastTitle2, { children: title }),
         description && /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(ToastDescription2, { children: description })

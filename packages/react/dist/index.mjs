@@ -2574,7 +2574,12 @@ function Toast2({
   onClose
 }) {
   return /* @__PURE__ */ jsxs5(Provider, { children: [
-    /* @__PURE__ */ jsxs5(StyledToast, { type, onOpenChange: (open) => !open && onClose?.(), children: [
+    /* @__PURE__ */ jsxs5(StyledToast, { type, onOpenChange: (open) => {
+      if (!open) {
+        console.log("Toast fechado");
+        onClose?.();
+      }
+    }, children: [
       /* @__PURE__ */ jsxs5("div", { children: [
         /* @__PURE__ */ jsx21(ToastTitle2, { children: title }),
         description && /* @__PURE__ */ jsx21(ToastDescription2, { children: description })

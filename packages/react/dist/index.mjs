@@ -220,7 +220,7 @@ import { User } from "phosphor-react";
 import { jsx, jsxs } from "react/jsx-runtime";
 function Avatar2({ alt, src, ...props }) {
   return /* @__PURE__ */ jsxs(AvatarContainer, { children: [
-    /* @__PURE__ */ jsx(AvatarImage, { src, ...props, alt }),
+    /* @__PURE__ */ jsx(AvatarImage, { src, alt, ...props }),
     /* @__PURE__ */ jsx(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx(User, {}) })
   ] });
 }

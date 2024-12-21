@@ -1,5 +1,11 @@
 # @alfa-ui/react
 
+## 5.0.0
+
+### Major Changes
+
+- update a avatar props insert a props src in component
+
 ## 4.0.0
 
 ### Major Changes
